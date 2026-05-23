@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.backends.legacy:build"
+
+[project]
+name = "guardify"
+version = "1.0.0"
+description = "A fine-tuned Machine learning classification model that detects and blocks jailbreak attempts and prompt injection threats in LLM-based conversational systems."
+readme = "README.md"
+license = { file = "LICENSE" }
+authors = [{ name = "Manikandan R", email = "rmanikandanrjsm@gmail.com" }]
+keywords = ["guardrails", "ml", "bert", "prompt", "safety"]
+dependencies = [
+    "scikit-learn",
+    "numpy",
+    "fsspec",
+    "pandas",
+]
+
+[tool.setuptools.package-data]
+guardify = ["models/*.pkl"]  # ← this bundles your pkl files
